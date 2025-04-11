@@ -11,9 +11,6 @@
         "config": {
           "distDir": "dist"
         }
-      },
-      {
-        "buildCommand": "npm run build"
       }
     ],
     "routes": [
@@ -29,5 +26,7 @@
         "src": "/(?!api|auth).*",
       "dest": "/index.html"
       }
-    ]
+    ],
+    "buildCommand": "npm run build"
+    
 }
