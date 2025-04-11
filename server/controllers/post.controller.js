@@ -39,7 +39,7 @@ const postByID = async (req, res, next, id) => {
         req.post = post
         next()
     } catch (err) {
-        return res.status('400').json({ 
+        return res.status(400).json({ 
         error: "Could not retrieve post"
         }) 
     }

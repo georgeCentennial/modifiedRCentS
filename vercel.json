@@ -1,5 +1,7 @@
 {
     "version": 2,
+    "buildCommand": "npm run build",
+    "installCommand": "npm install",
     "builds": [
       {
         "src": "server/express.js",
@@ -26,8 +28,6 @@
         "src": "/(?!api|auth).*",
       "dest": "/index.html"
       }
-    ],
-    "buildCommand": "npm run build",
-    "installCommand": "npm install"
+    ]
     
 }

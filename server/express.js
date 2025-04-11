@@ -53,10 +53,10 @@ app.use('/', commentRoutes)
 // Production mode static file serving
 if (process.env.NODE_ENV === 'production') {
     // Use proper path for client build in Vercel environment
-    app.use(express.static(path.join(__dirname, '../../client/build')))
+    app.use(express.static(path.join(__dirname, '../client/dist')))
     
     app.get('*', (req, res) => {
-        res.sendFile(path.join(__dirname, '../../client/build', 'index.html'))
+        res.sendFile(path.join(__dirname, '../client/dist', 'index.html'))
     })
 } else {
     // Development mode template
