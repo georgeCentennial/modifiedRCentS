@@ -23,8 +23,8 @@
         "dest": "server/express.js"
       },
       {
-        "src": "/(.*)",
-        "dest": "/$1"
+        "src": "/(?!api|auth).*",
+      "dest": "/index.html"
       }
     ]
 }

@@ -30,11 +30,13 @@ app.use(express.urlencoded({ extended: true }))
 
 // API prefix handlers
 app.use('/api', (req, res, next) => {
+    console.log('API endpoint hit', req.body);
     req.url = req.originalUrl.replace('/api', '')
     next()
 })
 
 app.use('/auth', (req, res, next) => {
+    console.log('Auth endpoint hit', req.body);
     req.url = req.originalUrl.replace('/auth', '')
     next()
 })
