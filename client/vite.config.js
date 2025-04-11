@@ -15,11 +15,13 @@ export default defineConfig({
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
+        rewrite: (path) => path.replace(/^\/api/, '')
       },
       "/auth": {
         target: "http://localhost:3000",
         changeOrigin: true,
         secure: false,
+        rewrite: (path) => path.replace(/^\/auth/, '')
       },
     },
   },
