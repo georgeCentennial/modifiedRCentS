@@ -7,11 +7,11 @@ export default defineConfig({
   root: __dirname, // ensures that the client folder becomes the Vite root.
   plugins: [react()],
   build: {
+    outDir: 'dist',
     manifest: true,
     rollupOptions: {
       input: "./index.html",
     },
-    outDir: 'dist',
   },
   server: {
     proxy: {
